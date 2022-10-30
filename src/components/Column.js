@@ -1,5 +1,5 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import "../styles/column.css"
 import Item from "./Item"
 const props = {
@@ -7,9 +7,16 @@ const props = {
     age: 90
 };
 export default function Column({name, ...props}) {
+    const itemName = useRef(null);
     const [items, setItems] = useState([])
-    const onAddBtnClick = event => {
-        setItems(items.concat(<Item key={items.length} />));
+    const addItem = event => {
+        event.preventDefault();
+        if(!itemName.current.value){
+          alert("You must enter an item name here...")
+          return
+        }
+        setItems(items.concat(<Item key={items.length} name={itemName.current.value} />));
+        itemName.current.value = ""
     };
   return (
     <div className='column-container'>
@@ -19,7 +26,8 @@ export default function Column({name, ...props}) {
            {items}
         </ul>
         <div className='add-btn-container'>
-             <button onClick={onAddBtnClick} className='add-item-btn'>+</button>
+             <input placeholder="New Item..." className='add-item-input' ref={itemName}/>
+             <button onClick={addItem} className='add-item-btn'>+</button>
         </div>
     </div>
   )

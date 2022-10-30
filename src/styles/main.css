@@ -29,11 +29,11 @@ hr{
     right:0;
     top:5%;
     margin:10px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 7px;
     cursor:pointer;
     transition: 0.25s ease-in-out;
-    opacity:0.9
+    text-indent: 10px;
 }
 .add-user-btn:hover{
     transition: 0.25s ease-in-out;
@@ -48,12 +48,13 @@ hr{
     right:0;
     top:0;
     margin:10px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 7px;
     cursor:pointer;
     transition: 0.25s ease-in-out;
     opacity:0.9;
     text-indent: 10px;
+    outline:none;
 }
 .add-user-input::placeholder{
     color:black;

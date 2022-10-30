@@ -6,3 +6,26 @@
     font-size:14px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
+.add-item-input{
+    border:none;
+    background-color: #3fb9ff;
+    width: 75%; 
+    height: 40px;
+    margin:10px;
+    font-size: 14px;
+    color:#000;
+    outline:none;
+    text-indent: 10px;
+    border-radius: 2px;
+    cursor:pointer;
+    transition: 0.25s ease-in-out;
+    opacity:0.9
+}
+.add-item-input:hover{
+    transition: 0.25s ease-in-out;
+    opacity: 1;
+}
+.add-item-input::placeholder{
+    color:black;
+    text-indent: 10px;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/item.css"
-export default function Item() {
+export default function Item({name, ...props}) {
   return (
-    <li className='item-style'>New Item</li>
+    <li className='item-style'>{name}</li>
   )
 }
