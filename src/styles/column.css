@@ -1,0 +1,33 @@
+.column-container{
+    background-color: #eeeeee;
+    border-radius: 0;
+    border:1px solid gray;
+    width:25%;
+    padding:10px;
+    margin:10px;
+    display:inline-block;
+}
+.add-btn-container{
+    margin-top:20px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.add-item-btn{
+    border:none;
+    background-color: #3fb9ff;
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-size: 25px;
+    cursor:pointer;
+    transition: 0.25s ease-in-out;
+    opacity:0.9
+}
+.add-item-btn:hover{
+    transition: 0.25s ease-in-out;
+    opacity: 1;
+}

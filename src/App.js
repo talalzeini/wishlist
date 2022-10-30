@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useRef} from "react"
+import Column from "./components/Column"
+import "./styles/main.css"
 
 function App() {
+  const userName = useRef(null);
+  const [users, setUsers] = useState([]);
+  const addUser = event => {
+    event.preventDefault();
+    if(!userName.current.value){
+      alert("You must enter a text here...")
+      return
+    }
+      setUsers(users.concat(<Column key={users.length} name={userName.current.value + "'s Wishlist"} />));
+      userName.current.value = ""
+ 
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className='columns-section'>
+      <div className="App">
+        {users}
+      </div>
+      <input placeholder="Enter New User..." className='add-user-input' ref={userName}></input>
+      <button onClick={addUser} className='add-user-btn'>New User</button>
+    </section>
   );
 }
 
