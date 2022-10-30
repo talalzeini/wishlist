@@ -20,14 +20,17 @@ export default function Column({name, ...props}) {
     };
   return (
     <div className='column-container'>
+        <div className='column'>
         <h4>{name}</h4> 
         <hr/>
-        <ul style={{listStyle:"none", padding:0}}>
-           {items}
-        </ul>
+        <h5>Number of Items: {items.length}</h5>
         <div className='add-btn-container'>
              <input placeholder="New Item..." className='add-item-input' ref={itemName}/>
              <button onClick={addItem} className='add-item-btn'>+</button>
+        </div>
+        <ul style={{listStyle:"none", padding:0,  whiteSpace: 'pre-wrap', listStylePosition: "outside"}}>
+           {items}
+        </ul>
         </div>
     </div>
   )

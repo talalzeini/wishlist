@@ -16,13 +16,23 @@ function App() {
  
   };
   return (
-    <section className='columns-section'>
-      <div className="App">
-        {users}
-      </div>
-      <input placeholder="Enter New User..." className='add-user-input' ref={userName}></input>
-      <button onClick={addUser} className='add-user-btn'>New User</button>
-    </section>
+    <div>
+      <section className='new-user-container'>
+         <h4>New Wishlist</h4> 
+         <hr/>
+         <h5>Number of Users: {users.length}</h5>
+         <div className='add-btn-container'>
+          <input placeholder="Enter New User..." className='add-item-input' ref={userName}></input>
+          <button onClick={addUser} className='add-item-btn'>+</button>
+         </div>
+      </section>
+      <hr style={{border:'1px solid #eee', width:"100%"}}/>
+      <section className='columns-section'>
+        <div className="App">
+          {users}
+        </div>
+      </section>
+    </div>
   );
 }
 
