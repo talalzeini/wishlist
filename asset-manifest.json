@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wishlist/static/css/main.6d4870e9.css",
+    "main.js": "/wishlist/static/js/main.53b4ef4e.js",
+    "index.html": "/wishlist/index.html",
+    "main.6d4870e9.css.map": "/wishlist/static/css/main.6d4870e9.css.map",
+    "main.53b4ef4e.js.map": "/wishlist/static/js/main.53b4ef4e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d4870e9.css",
+    "static/js/main.53b4ef4e.js"
+  ]
+}
